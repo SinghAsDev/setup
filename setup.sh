@@ -42,6 +42,8 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.vimrc .
 
+sudo cp -r dotfiles/.vim/* ~/.vim/
+
 #General vim plugins
 cd ~/.vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle
