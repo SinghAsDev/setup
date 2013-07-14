@@ -41,3 +41,23 @@ ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.vimrc .
+
+#General vim plugins
+cd ~/.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+cd ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git #For browsing filesystem inside vim
+git clone git://github.com/godlygeek/tabular.git #For indenting files with regex
+git clone https://github.com/scrooloose/syntastic.git #Syntax checker
+git clone https://github.com/scrooloose/nerdcommenter.git # Comment or Uncomment code
+git clone https://github.com/Lokaltog/vim-easymotion.git #Easy and fast navigation in vim
+
+#Javascript specific vim plugins
+git clone https://github.com/pangloss/vim-javascript.git  #Indentation for javascript
+git clone https://github.com/jamescarr/snipmate-nodejs.git #Add nodejs snippets
+mv snipmate-nodejs/snippets/javascript ~/.vim/snippets
+rm -rf snipmate-nodejs
+
+#HTML and CSS specific vim plugins
+git clone http://github.com/mattn/zencoding-vim.git #Expanding abbreviations
