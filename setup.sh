@@ -2,6 +2,9 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
+#Install curl
+sudo apt-get install curl
+
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
 sudo apt-get install -y git-core
@@ -29,6 +32,9 @@ npm install -g jshint
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
 sudo apt-get install -y rlwrap
+
+#Install tmux
+sudo apt-get install tmux
 
 # git pull and install dotfiles as well
 cd $HOME
