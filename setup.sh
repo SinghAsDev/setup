@@ -16,7 +16,7 @@ nvm install v0.10.12
 nvm use v0.10.12
 
 #Install vim
-sudp apt-get install -y vim
+sudo apt-get install -y vim
 
 #Install nodejs and npm
 sudo apt-get update
