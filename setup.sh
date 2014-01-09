@@ -50,6 +50,7 @@ ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.tmux.conf .
 
 sudo cp -r dotfiles/.vim/* ~/.vim/
+sudo cp -r dotfiles/.tmux ~/
 
 #General vim plugins
 cd ~/.vim
