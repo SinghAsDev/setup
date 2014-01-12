@@ -52,6 +52,21 @@ ln -sb dotfiles/.tmux.conf .
 sudo cp -r dotfiles/.vim/* ~/.vim/
 sudo cp -r dotfiles/.tmux ~/
 
+#update .vim molokai colors
+cd ~/.vim
+if [ -d ./colors/ ]; then
+    sudo rm -rf ./colors
+fi
+
+if [ -d ./molokai ]; then
+    sudo rm -rf ./molokai
+fi
+
+sudo git clone https://github.com/tomasr/molokai.git
+sudo mv molokai/colors .
+rm -rf molokai
+cd ~
+
 #General vim plugins
 cd ~/.vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle
